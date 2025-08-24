@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darlin Rosa - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #F0EAD6; /* Eggshell background */
+        }
+        
+        section {
+            padding: 80px 0; 
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(143, 143, 143, 0.692), rgba(0, 0, 0, 0.836)), url('https://wallpapers.com/images/hd/colorful-candy-monster-fantasy-art-xkp4wd0bcd5lprru.jpg') no-repeat center center/cover;
+            color: rgb(240, 240, 240);
+            padding: 150px 0;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+        
+        .skill-bar {
+            height: 25px;
+            background-color: #6F4C3C;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #e68eaf;
+        }
+        
+        .portfolio-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-icon {
+            font-size: 24px;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        /* Adjust section backgrounds for better contrast */
+        #about, #skills {
+            background-color: rgba(255, 255, 255, 0.7) !important;
+            backdrop-filter: blur(5px);
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Custom button colors to complement eggshell */
+        .btn-primary {
+            background-color: #e68eaf;
+            border-color: #e68eaf;
+        }
+        
+        .btn-primary:hover {
+            background-color: #6F4C3C;
+            border-color: #6F4C3C;
+        }
+        
+        /* Carousel styling */
+        .carousel-item {
+            padding: 20px;
+            height: 500px;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        
+        .carousel-image {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .carousel-indicators {
+            bottom: -50px;
+        }
+        
+        .carousel-indicators button {
+            background-color: #e68eaf;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Darlin Rosa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <img src="Portfolio_Img.png" alt="Your Name" class="profile-img mb-4">
+            <h1 class="display-4">Darlin Rosa</h1>
+            <p class="lead">AI Prompt Engineer & Content Moderator</p>
+            <a href="#portfolio" class="btn btn-primary btn-lg mt-3">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5">About Me</h2>
+                    <p class="lead">Get to know me better</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3>Who am I?</h3>
+                    <p>Hello! I'm a passionate AI prompt engineer with expertise in creating effective prompts for AI systems and moderating content to ensure quality and safety.</p>
+                    <p>With experience in both technical and creative domains, I've worked on various projects ranging from AI content generation to complex moderation systems.</p>
+                    <p>When I'm not working with AI, you can find me exploring graphic design, 3D animation, or experimenting with new technologies.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Information</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Name:</strong> Darlin Rosa</li>
+                                <li class="list-group-item"><strong>Email:</strong> sc.lingartist@gmail.com</li>
+                                <li class="list-group-item"><strong>Location:</strong> San Pedro Sula, Honduras</li>
+                                <li class="list-group-item"><strong>Education:</strong> Graphic Design & 3D Studio Animation</li>
+                                <li class="list-group-item"><strong>Freelance:</strong> Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5">My Portfolio</h2>
+                    <p class="lead">Check out some of my recent work</p>
+                </div>
+            </div>
+            
+            <!-- Portfolio Carousel -->
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Portfolio Item 1 -->
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1200x600/4a3f66/ffffff?text=AI+Prompt+Engineering" class="d-block w-100 carousel-image" alt="AI Prompt Engineering">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>AI Prompt Engineering</h5>
+                            <p>Developed effective prompt strategies for AI content generation systems that increased output quality by 40%.</p>
+                            <a href="#" class="btn btn-primary">View Project Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 2 -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x600/3f6659/ffffff?text=Content+Moderation+System" class="d-block w-100 carousel-image" alt="Content Moderation System">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Content Moderation System</h5>
+                            <p>Implemented AI-powered content moderation for online platforms, reducing manual review time by 65%.</p>
+                            <a href="#" class="btn btn-primary">View Project Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x600/66443f/ffffff?text=3D+Animation+Project" class="d-block w-100 carousel-image" alt="3D Animation Project">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>3D Animation Project</h5>
+                            <p>Created animated sequences using 3D Studio Max for commercial use, featured in 3 industry publications.</p>
+                            <a href="#" class="btn btn-primary">View Project Details</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- Project Thumbnails (for mobile) -->
+            <div class="row d-md-none mt-5">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <img src="https://placehold.co/600x400/4a3f66/ffffff?text=AI+Prompt+Engineering" class="card-img-top" alt="AI Prompt Engineering">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Prompt Engineering</h5>
+                            <p class="card-text">Developed effective prompt strategies for AI content generation systems.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <img src="https://placehold.co/600x400/3f6659/ffffff?text=Content+Moderation+System" class="card-img-top" alt="Content Moderation System">
+                        <div class="card-body">
+                            <h5 class="card-title">Content Moderation System</h5>
+                            <p class="card-text">Implemented AI-powered content moderation for online platforms.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/66443f/ffffff?text=3D+Animation+Project" class="card-img-top" alt="3D Animation Project">
+                        <div class="card-body">
+                            <h5 class="card-title">3D Animation Project</h5>
+                            <p class="card-text">Created animated sequences using 3D Studio Max for commercial use.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5">My Skills</h2>
+                    <p class="lead">Technologies and tools I work with</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>AI Prompt Engineering</h5>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>Content Moderation</h5>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>Graphic Design</h5>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>3D Animation</h5>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>Natural Language Processing</h5>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h5>UI/UX Design</h5>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5">Get In Touch</h2>
+                    <p class="lead">I'd love to hear from you!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Replace with your Google Form action URL -->
+                            <form action="https://docs.google.com/forms/d/1amOMkIXFz_cOwAikBcEJrw6T-kC4PnqWUiI3O2_MuoQ/formResponse" method="POST" target="hidden_iframe">
+                                <!-- Name Field -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <!-- Replace entry.XXXXXXX with your field ID from Google Forms -->
+                                    <input type="text" class="form-control" id="name" name="entry.8266665" required>
+                                </div>
+                                
+                                <!-- Email Field -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <!-- Replace entry.XXXXXXX with your field ID from Google Forms -->
+                                    <input type="email" class="form-control" id="email" name="entry.754165755" required>
+                                </div>
+                                
+                                <!-- Message Field -->
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <!-- Replace entry.XXXXXXX with your field ID from Google Forms -->
+                                    <textarea class="form-control" id="message" name="entry.306560167" rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                
+                                <!-- Success Message (Initially Hidden) -->
+                                <div id="success-message" class="alert alert-success mt-3" style="display: none;">
+                                    Thank you for your message! I'll get back to you soon.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023 Darlin Rosa. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://www.linkedin.com/in/darlin-rosa-350781298/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Handle form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#contact form');
+            const successMessage = document.getElementById('success-message');
+            
+            // Add event listener for form submission
+            if (form) {
+                form.addEventListener('submit', function() {
+                    // Show success message after a short delay
+                    setTimeout(function() {
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(function() {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }, 1000);
+                });
+            }
+            
+            // Initialize carousel with autoplay and pause on hover
+            const myCarousel = document.getElementById('portfolioCarousel');
+            const carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 4000,
+                pause: 'hover'
+            });
+        });
+    </script>
+</body>
+</html>
